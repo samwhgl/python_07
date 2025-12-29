@@ -37,19 +37,15 @@ class GameEngine:
         :raises AttributeError: If factory or strategy is not configured.
         """
         if not self.factory or not self.strategy:
-            raise AttributeError("Engine must be configured before simulation.")
+            raise AttributeError(
+                "Engine must be configured before simulation.")
 
-        # Create cards via the factory
         c1 = self.factory.create_creature("dragon")
         c2 = self.factory.create_creature("goblin")
         c3 = self.factory.create_spell("lightning")
         self.cards_created += 3
-
         hand = [c1, c2, c3]
-
-        # Execute the turn via the strategy
         turn_actions = self.strategy.execute_turn(hand, [])
-
         return {
             "strategy": self.strategy.get_strategy_name(),
             "actions": turn_actions

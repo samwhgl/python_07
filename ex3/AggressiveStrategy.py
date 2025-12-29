@@ -1,4 +1,3 @@
-from typing import List, Dict, Any
 from ex3.GameStrategy import GameStrategy
 
 
@@ -16,7 +15,7 @@ class AggressiveStrategy(GameStrategy):
         """
         return "AggressiveStrategy"
 
-    def prioritize_targets(self, available_targets: List[Any]) -> List[Any]:
+    def prioritize_targets(self, available_targets: list) -> list:
         """
         Determine target priority, focusing on the enemy player.
 
@@ -27,7 +26,7 @@ class AggressiveStrategy(GameStrategy):
             return ["Enemy Player"]
         return available_targets
 
-    def execute_turn(self, hand: List[Any], battlefield: List[Any]) -> Dict[str, Any]:
+    def execute_turn(self, hand: list, battlefield: list) -> dict:
         """
         Execute a game turn based on aggressive logic.
 
@@ -37,7 +36,7 @@ class AggressiveStrategy(GameStrategy):
         """
         played = []
         mana_used = 0
-        mana_limit = 5  # Simulated mana limit for the example
+        mana_limit = 5
 
         for card in hand:
             if mana_used + card.cost <= mana_limit:

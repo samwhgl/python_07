@@ -4,7 +4,7 @@ from ex0.Card import Card
 
 class CreatureCard(Card):
     """
-    Concrete implementation of a Card representing a creature with combat stats.
+    Concrete implementation of a Card representing a creature with combat stats
     """
 
     def __init__(

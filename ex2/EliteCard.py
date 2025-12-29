@@ -77,7 +77,7 @@ class EliteCard(Card, Combatable, Magical):
         """
         return {"attack": self.attack_power}
 
-    def cast_spell(self, spell_name: str, targets: List[Any]) -> Dict[str, Any]:
+    def cast_spell(self, spell_name: str, targets: List[Any]) -> dict:
         """
         Cast a magical spell consuming mana.
 

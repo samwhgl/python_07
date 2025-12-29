@@ -1,5 +1,4 @@
 from abc import ABC
-from typing import Dict, Any, List
 
 
 class Magical(ABC):
@@ -7,7 +6,7 @@ class Magical(ABC):
     Abstract interface defining magical capabilities for cards.
     """
 
-    def cast_spell(self, spell_name: str, targets: List[Any]) -> Dict[str, Any]:
+    def cast_spell(self, spell_name: str, targets: list) -> dict:
         """
         Cast a magical spell targeting specific entities.
 
@@ -18,7 +17,7 @@ class Magical(ABC):
         """
         raise NotImplementedError()
 
-    def channel_mana(self, amount: int) -> Dict[str, Any]:
+    def channel_mana(self, amount: int) -> dict:
         """
         Increase the mana reserve of the card.
 
@@ -28,7 +27,7 @@ class Magical(ABC):
         """
         raise NotImplementedError()
 
-    def get_magic_stats(self) -> Dict[str, Any]:
+    def get_magic_stats(self) -> dict:
         """
         Retrieve the magical statistics of the card.
 
